@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes pulseGlowBlue {
+    0%, 100% {
+      box-shadow: 0 0 25px 0px rgba(36, 161, 222, 0.45);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 45px 8px rgba(36, 161, 222, 0.7);
+      transform: scale(1.015);
+    }
+  }
+
+  @keyframes shimmerButton {
+    0% {
+      transform: translateX(-150%) skewX(-20deg);
+    }
+    100% {
+      transform: translateX(200%) skewX(-20deg);
+    }
+  }
+
+  .glow-telegram-btn {
+    box-shadow: 0 8px 30px rgba(36, 161, 222, 0.4);
+  }
+
+  .glow-telegram-btn:hover {
+    box-shadow: 0 10px 40px rgba(36, 161, 222, 0.6);
+  }
+
+  .glow-avatar-telegram {
+    box-shadow: 0 12px 40px rgba(36, 161, 222, 0.45);
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlowBlue 3s infinite ease-in-out;
+  }
+
+  .shimmer-effect {
+    animation: shimmerButton 2.8s infinite;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #0e1621;
+  color: #e4ecf2;
+}
