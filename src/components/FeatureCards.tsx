@@ -1,30 +1,30 @@
 import React from 'react';
-import { Newspaper, Zap, ShieldCheck, MessageSquare, Check } from 'lucide-react';
+import { Newspaper, BookOpen, ShieldCheck, MessageSquare, Check } from 'lucide-react';
 
 export const FeatureCards: React.FC = () => {
   const features = [
     {
       id: 'f1',
-      title: 'Daily Updates',
-      subtitle: 'Important news, notifications & daily alerts',
+      title: 'Daily Curated Updates',
+      subtitle: 'विश्वसनीय दैनिक अपडेट्स, महत्वपूर्ण सूचनाएं और सारांश',
       icon: <Newspaper className="w-5 h-5 text-[#2AABEE]" />,
     },
     {
       id: 'f2',
-      title: 'Instant Alerts & Fast Tips',
-      subtitle: 'Direct notifications without delay',
-      icon: <Zap className="w-5 h-5 text-[#2AABEE]" />,
+      title: 'Educational Discussions',
+      subtitle: 'ज्ञानवर्धक चर्चाएं, सवाल-जवाब और विषयवार विश्लेषण',
+      icon: <BookOpen className="w-5 h-5 text-[#2AABEE]" />,
     },
     {
       id: 'f3',
-      title: '100% Free VIP Access',
-      subtitle: 'No hidden fee, completely free lifetime',
+      title: 'Strict Anti-Spam Moderation',
+      subtitle: 'सख्त नियम और सक्रिय एडमिन्स — कोई स्पैम या फर्जीवाड़ा नहीं',
       icon: <ShieldCheck className="w-5 h-5 text-[#2AABEE]" />,
     },
     {
       id: 'f4',
-      title: 'Active Community Discussion',
-      subtitle: 'Ask questions & connect with members',
+      title: 'Open Community Network',
+      subtitle: '100% पारदर्शी और सुरक्षित मंच — कभी भी जुड़ें या छोड़ें',
       icon: <MessageSquare className="w-5 h-5 text-[#2AABEE]" />,
     },
   ];
@@ -60,4 +60,5 @@ export const FeatureCards: React.FC = () => {
     </div>
   );
 };
+
 

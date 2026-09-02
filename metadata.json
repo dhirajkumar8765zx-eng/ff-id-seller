@@ -1,6 +1,6 @@
 {
   "name": "Telegram Join Landing Page",
-  "description": "High-converting Facebook Ads to Telegram direct redirect landing page with customizable links, urgency timer, and 1-click instant join.",
+  "description": "Educational Telegram community hub with verified community guidelines, Meta Ad policy compliance, privacy policy, and disclaimers.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

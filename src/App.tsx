@@ -12,19 +12,21 @@ import { StatsRow } from './components/StatsRow';
 import { MembersCard } from './components/MembersCard';
 import { FeatureCards } from './components/FeatureCards';
 import { BottomJoinCard } from './components/BottomJoinCard';
+import { LegalFooter } from './components/LegalFooter';
+import { LegalModals, LegalModalType } from './components/LegalModals';
 import { EditModal } from './components/EditModal';
 import { recordView } from './utils/analytics';
 
 const DEFAULT_CONFIG: TelegramPageConfig = {
   telegramLink: 'https://t.me/+xJu7Udo2-EQ1Y2M1',
-  communityTitle: 'Join Telegram Community',
-  communitySubtitle: 'जानकारी, updates और discussion के लिए हमारे group से जुड़ें',
-  buttonText: 'Join Telegram Group',
+  communityTitle: 'Knowledge & Updates Community',
+  communitySubtitle: 'विश्वसनीय दैनिक अपडेट्स, शैक्षिक नोट्स और महत्वपूर्ण सूचनाओं के लिए हमारे निःशुल्क ग्रुप से जुड़ें',
+  buttonText: 'Join Telegram Channel',
   totalMembers: '8.4K+',
-  onlineMembers: '351',
-  activeStatus: '24/7',
-  detailedMembersCount: '8,426 Members',
-  tagline: 'Active community group',
+  onlineMembers: '350+',
+  activeStatus: 'Daily',
+  detailedMembersCount: 'सक्रिय शैक्षिक ग्रुप',
+  tagline: 'विश्वसनीय एवं सक्रिय कम्युनिटी',
 };
 
 export default function App() {
@@ -45,6 +47,7 @@ export default function App() {
   });
 
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [activeLegalModal, setActiveLegalModal] = useState<LegalModalType>(null);
 
   useEffect(() => {
     // Record view for stats
@@ -94,7 +97,7 @@ export default function App() {
             buttonText={config.buttonText}
           />
 
-          {/* 3-Column Metrics Stats Row (8.4K+ MEMBERS | 351 ONLINE | 24/7 ACTIVE) */}
+          {/* 3-Column Metrics Stats Row */}
           <StatsRow
             totalMembers={config.totalMembers}
             onlineMembers={config.onlineMembers}
@@ -107,7 +110,7 @@ export default function App() {
             tagline={config.tagline}
           />
 
-          {/* Feature / Benefits List Cards */}
+          {/* Compliant Educational Features */}
           <FeatureCards />
 
           {/* Bottom "अभी ज्वाइन करें" Telegram Card with Photo & Logo */}
@@ -119,6 +122,15 @@ export default function App() {
         </main>
       </div>
 
+      {/* Meta Ad Compliant Legal Footer with Mandatory Disclaimers & Policies */}
+      <LegalFooter onOpenLegal={(type) => setActiveLegalModal(type)} />
+
+      {/* Legal Modals (Privacy Policy, Terms of Service, Disclaimer, Contact) */}
+      <LegalModals
+        activeModal={activeLegalModal}
+        onClose={() => setActiveLegalModal(null)}
+      />
+
       {/* Edit & Telegram Link Customizer Modal */}
       <EditModal
         isOpen={isSettingsOpen}
@@ -126,10 +138,6 @@ export default function App() {
         config={config}
         onSave={handleSaveConfig}
       />
-
-      {/* Bottom Subtle Bar */}
-      <footer className="w-full max-w-md mx-auto px-4 mt-6 text-center text-xs text-[#526f85]">
-      </footer>
     </div>
   );
 }

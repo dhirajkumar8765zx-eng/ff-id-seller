@@ -71,7 +71,7 @@ export const TelegramJoinButton: React.FC<TelegramJoinButtonProps> = ({
       {/* Security & Free Guarantee subtext */}
       <div className="mt-2.5 flex items-center justify-center space-x-1.5 text-xs text-[#708a9f] font-medium">
         <Lock className="w-3.5 h-3.5 text-[#526f85]" />
-        <span>Free · No payment · Leave anytime</span>
+        <span>100% निःशुल्क · शैक्षिक कम्युनिटी · कभी भी छोड़ें</span>
       </div>
     </div>
   );

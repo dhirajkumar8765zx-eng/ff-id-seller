@@ -67,13 +67,13 @@ export const BottomJoinCard: React.FC<BottomJoinCardProps> = ({
             <div>
               <div className="flex items-center gap-1 text-[10px] font-bold text-[#49c2ff] uppercase tracking-wider">
                 <Sparkles className="w-3 h-3 text-[#2AABEE]" />
-                <span>OFFICIAL TELEGRAM</span>
+                <span>COMMUNITY CHANNEL</span>
               </div>
               <h3 className="text-sm font-extrabold text-white leading-tight">
                 {communityTitle}
               </h3>
               <p className="text-[11px] text-[#7d97ab] leading-tight mt-0.5">
-                फ्री अपडेट्स और टिप्स
+                दैनिक अपडेट्स व ज्ञानवर्धक चर्चाएं
               </p>
             </div>
           </div>
